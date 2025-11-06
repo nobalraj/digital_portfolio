@@ -1,197 +1,199 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Portfolio</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            
-            background-image:url("b.jpeg");
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nobalraj S | Resume</title>
+<style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body {
+        font-family:"Poppins",sans-serif;
+        background:#f4f7fb;
+        color:#333;
+        line-height:1.6;
+        padding:2rem;
+    }
 
-        header {
-            background-color: #949919;
-            color: #fff;
-            text-align: center;
-            padding: 2rem 0;
-            position: relative; /* Add this */
-        }
+    .container {
+        max-width:900px;
+        margin:auto;
+        background:#fff;
+        border-radius:15px;
+        box-shadow:0 6px 25px rgba(0,0,0,0.1);
+        overflow:hidden;
+        animation:fadeIn 1.2s ease;
+    }
 
-        .header-content h1 {
-            font-size: 2.5rem;
-        }
+    header {
+        background:linear-gradient(135deg,#0072ff,#00c6ff);
+        color:white;
+        text-align:center;
+        padding:2.5rem 1rem;
+        position:relative;
+    }
 
-        /* Add styles for the round profile picture */
-        .profile-picture {
-            width: 100px; /* Adjust the size as needed */
-            height: 100px;
-            border-radius: 75%; /* Create a circular shape */
-            object-fit: cover; /* To ensure the image fills the circular area */
-            position: absolute; /* Add this */
-            top: 75px; /* Adjust top position as needed */
-            left: 75px; /* Adjust left position as needed */
-        }
+    .profile-picture {
+        width:120px; height:120px;
+        border-radius:50%;
+        border:4px solid #fff;
+        object-fit:cover;
+        position:absolute;
+        left:10%;
+        bottom:-60px;
+        transform:translateX(-50%);
+        box-shadow:0 0 15px rgba(255,255,255,0.4);
+        animation:float 4s ease-in-out infinite;
+    }
 
-        nav {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-        }
+    header h1 { font-size:2rem; margin-bottom:.3rem; }
+    header p { font-size:1rem; color:#e8f9ff; }
 
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-        }
+    main { padding:5rem 2rem 2rem; }
 
-        nav ul li {
-            display: inline;
-            margin: 0 20px;
-        }
+    section { margin-bottom:2rem; }
+    h2 {
+        color:#0072ff;
+        border-left:5px solid #00c6ff;
+        padding-left:10px;
+        margin-bottom:1rem;
+        font-size:1.3rem;
+    }
 
-        nav ul li a {
-            text-decoration: none;
-            color: #fff;
-        }
+    p,li { color:#444; }
 
-        .section-content {
-            background-color: #fff;
-            padding: 2rem;
-            margin: 1rem;
-            border-radius: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            text-align: justify;
-        }
+    ul { padding-left:20px; }
 
-        .download-button {
-            background-color: #333;
-            color: #fff;
-            padding: 0.5rem 1rem;
-            text-decoration: none;
-            border-radius: 20px;
-            display: inline-block;
-            margin-top: 10px;
-            align-self: center;
-        }
+    .info { display:flex; flex-wrap:wrap; gap:15px; }
+    .info div { flex:1 1 45%; }
 
-        .download-button:hover {
-            background-color: #555;
-        }
+    .skills-list li, .project-list li { margin-bottom:.5rem; }
 
-        footer {
-            text-align: center;
-            padding: 1rem 0;
-            background-color: #333;
-            color: #fff;
-        }
+    .contact a {
+        color:#0072ff;
+        text-decoration:none;
+        transition:.3s;
+    }
+    .contact a:hover { text-decoration:underline; }
 
-        ul {
-            list-style-type: disc;
-            padding-left: 20px;
-        }
-    </style>
+    footer {
+        text-align:center;
+        background:#0072ff;
+        color:#fff;
+        padding:1rem;
+        font-size:.9rem;
+        border-top-left-radius:10px;
+        border-top-right-radius:10px;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+        from{opacity:0;transform:translateY(20px);}
+        to{opacity:1;transform:translateY(0);}
+    }
+    @keyframes float {
+        0%,100%{transform:translate(-50%,0);}
+        50%{transform:translate(-50%,-10px);}
+    }
+
+    @media(max-width:768px){
+        body{padding:1rem;}
+        main{padding:5rem 1rem 1rem;}
+        .info div{flex:1 1 100%;}
+    }
+</style>
 </head>
 <body>
+
+<div class="container">
     <header>
-        <div class="header-content">
-            <!-- Add your profile picture here -->
-            <img src="ns photo.jpg" alt="Your Profile Picture" class="profile-picture">
-            <h1>NOBALRAJ S</h1>
-            <p>Am Bachelor of Computer Applications</p>            
-        </div>
+        <h1>NOBALRAJ S</h1>
+        <p>Bachelor of Computer Applications</p>
+        <img src="ns photo.jpg" alt="Profile Photo" class="profile-picture">
     </header>
 
-    <nav>
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#resume">Resume</a></li>
-           
-        </ul>
-    </nav>
-
-    <section id="about">
-        <div class="section-content">
-            <h2>About Me</h2>
-            <p>I am a passionate and dedicated Bachelor of Computer Applications (BCA) student with a keen interest in software development, web technologies, and problem-solving. My academic journey has provided me with a strong foundation in programming languages like Python, Java, C++, and JavaScript, along with hands-on experience in database management, web development, and software engineering principles. I enjoy working on real-world projects that challenge my skills and help me grow as a developer. Apart from coding, I am a quick learner, a team player, and always eager to explore latest trends in technology<b></b> </p>
-
-        </div>
-    </section>
-
-    <section id="education">
-        <div class="section-content">
-            <h2>Education</h2>
-            <p>madras university ug -BCA</p>
+    <main>
+        <section class="info">
+            <div><strong>📍 Location:</strong> Chennai, India</div>
+            <div><strong>📧 Email:</strong> <a href="mailto:nobalrajs@gmail.com">nobalrajs@gmail.com</a></div>
+            <div><strong>📞 Phone:</strong> +91-6369859447</div>
+            <div><strong>💼 Portfolio:</strong> <a href="https://nobalraj.github.io/digital_portfolio/">My Portfolio</a></div>
             
-            
-        </div>
-    </section>
+        </section>
 
-    <section id="skills">
-        <div class="section-content">
-            <h2>Skills</h2>
-            <ul>
-                <li>python</li>
-                <li>c++</li>
-                <li>java</li>
-                <li>html and css</li>
-                
-                
-                
-                
-                
+        <section>
+            <h2>Career Objective</h2>
+            <p>
+                I have completed a Diploma in Computer Engineering and am currently pursuing a Bachelor of Computer Applications (BCA). 
+                I possess strong skills in Python programming, with practical experience using the Django framework and various web technologies. 
+                During a one-month internship, I successfully developed an Office Management System, demonstrating my capability in applying technical knowledge to real-world projects.
+                I am proficient in Python-based web development and possess excellent problem-solving abilities, suited for dynamic software development environments.
+
+                This version highlights your education, technical skills, internship experience, and problem-solving aptitude in a clear, professional tone suitable for recruiters and hiring managers.
+            </p>
+        </section>
+
+        <section>
+        <h2>Education</h2>
+        <p><strong>Bachelor of Computer Applications (BCA)</strong> — Sri Muthukumaran Arts and Science College<br>
+            2023 – Present | Percentage:  70.5 %</p>
+        <p><strong>Diploma in Computer Engineering (DCE)</strong> — Vivekananda Polytechnic College, Neyveli<br>
+            2019 – 2021 | Percentage:  90 %</p>
+        </section>
+
+        <section>
+            <h2>Technical Skills</h2>
+            <ul class="skills-list">
+                <li>Programming: Python, C++, Java</li>
+                <li>Web Technologies: HTML, CSS, JavaScript, Django</li>
+                <li>Database: MySQL, SQLite</li>
+                <li>Tools: Git, VS Code, MS Office</li>
             </ul>
-        </div>
-    </section>
+        </section>
 
-    <section id="projects">
-        <div class="section-content">
+        <section>
             <h2>Projects</h2>
-            <ul>
-                <li><a href="#">Bank Menagement System</a></li>
-                <li><a href="#">Real time weather detection</a></li>
-                <li><a href="#">personal portfolio website</a></li>
+            <ul class="project-list">
+                <li><strong>Office Management System</strong> — Internship project using Django framework for employee & task management.</li>
+                <li><strong>Digital portfolio</strong> — HTML, CSS & JavaScript project.</li>
+                <li><strong>Real-Time Weather App</strong> — HTML, CSS & JavaScript project using OpenWeather API.</li>
+                <li><strong>Bank Management System</strong> — Developed in Python </li>
+                <li><strong>Calculater</strong> — Desktop Application in Python</li>
                 
-                <!-- Add more project links here -->
             </ul>
-        </div>
-    </section>
+        </section>
 
-    <section id="resume">
-    
-        <div class="section-content">
-            <center>
-            <h2>Resume</h2>
-            <a href="ns_resume.pdf" target="_blank" class="download-button">Download CV</a>
-        </center>
-        </div>
-        
-    </section>
+        <section>
+            <h2>Internship</h2>
+            <p><strong>Office Management System —</strong> One-month internship at Acsass <br>
+               Worked on Python Django backend, data models, and UI integration.</p>
+        </section>
 
-    <footer>
-        <p>&copy; 2025 Nobalraj S</p>
-    </footer>
+        <section>
+            <h2>Strengths</h2>
+            <ul>
+                <li>Quick learner & adaptable</li>
+                <li>Good communication & teamwork</li>
+                <li>Strong analytical and problem-solving skills</li>
+            </ul>
+        </section>
 
-    <script>
-        // Smooth scrolling to section when clicking on navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
+        <section class="contact">
+            <h2>Contact Me</h2>
+            <p>
+                Feel free to reach out via <a href="mailto:nobalrajs@gmail.com">email</a> or connect on 
+                <a href="https://linkedin.com/in/nobalraj" target="_blank">LinkedIn</a>.
+            </p>
+        </section>
+    </main>
 
-                const targetId = this.getAttribute('href').substring(1);
-                const targetElement = document.getElementById(targetId);
+  <footer style="text-align:center; color: #b2e5fa;">
+    © 2025 Nobalraj S | 
+    <a href="https://github.com/nobalraj" target="_blank" style="color: #c0ebef; text-decoration:none;">
+        GitHub
+    </a> 
+    <!-- &mdash; Built with Django, HTML & CSS -->
+</footer>
+</div>
 
-                if (targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-    </script>
 </body>
 </html>
